@@ -1,0 +1,79 @@
+.visit {
+  &-formControl {
+
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  &-cityLabel {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+
+  &-cityInput {
+    margin-top: 5px;
+    width: 70%;
+    height: 50px;
+    padding: 5px 5px;
+    background-color: rgba($color: black, $alpha: 0.1);
+    border-radius: 10px;
+    border: 0.5px solid grey;
+    outline: none;
+    font-size: 25px;
+  }
+
+  &-cityButton {
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 20px 30px;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      transition: all 0.5s;
+      background-color: rgba(248, 248, 255, 0.596);
+    }
+  }
+}
+
+.visitTable {
+  &-control {
+
+    border: 1px solid grey;
+    background-color: ghostwhite;
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+    min-height: 30px;
+    padding: 5px;
+
+  }
+
+  &-name {
+
+    float: left;
+
+  }
+
+  &-delete {
+    margin-left: 10px;
+    float: right;
+  }
+
+  &-correct {
+    float: right;
+
+
+  }
+}

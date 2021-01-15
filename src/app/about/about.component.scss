@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+}
+
+.about {
+  width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  &-image {
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 500px;
+    height: 200px;
+    background-image: url('../../assets/images/travel.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size:cover;
+
+  }
+
+  &-text {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}

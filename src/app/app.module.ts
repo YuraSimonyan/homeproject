@@ -3,14 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavmenuComponent } from './navmenu/navmenu.component';
+import { MainComponent } from './main/main.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
+import { AboutComponent } from './about/about.component';
+import { VisitComponent } from './visit/visit.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavmenuComponent,
+    MainComponent,
+    AboutComponent,
+    VisitComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
