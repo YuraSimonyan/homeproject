@@ -23,7 +23,7 @@
         <form [formGroup]="form" (ngSubmit)="submit()">
           <label for="postImg"></label>
 
-          <input type="file" placeholder="upload image" id="postImg" formControlName='img'
+          <input type="file" placeholder="upload image" id="postImg" 
             (change)="onFileChange($event)">
           <div *ngIf="form.get('img').invalid && form.get('img').touched" class="validation"><small>choose image</small>
           </div>
