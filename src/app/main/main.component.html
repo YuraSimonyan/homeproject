@@ -1,14 +1,11 @@
 <div class="main">
   <h1>Travel Blog</h1>
-
-  <!--  -->
   <div class="main-container">
     <div *ngIf="show">
       <button class="main-add" (click)="addPost()">add new post</button>
     </div>
-    <!--  -->
     <div *ngIf="show; else postForms">
-      <div class="main-card" *ngFor="let p of posts">
+      <div class="main-card" *ngFor="let p of mainService.posts">
         <div class="main-item">
           <img [src]="getSantizeUrl(p.img)" alt="" class="main-img">
           <h2 class="main-header">{{p.title}} </h2>
@@ -17,17 +14,13 @@
       </div>
     </div>
     <ng-template #postForms>
-
       <div class="postForm">
         <h2 class="postFormHeader">Adding post</h2>
         <form [formGroup]="form" (ngSubmit)="submit()">
           <label for="postImg"></label>
-
-          <input type="file" placeholder="upload image" id="postImg" 
-            (change)="onFileChange($event)">
+          <input type="file" placeholder="upload image" id="postImg" (change)="onFileChange($event)">
           <div *ngIf="form.get('img').invalid && form.get('img').touched" class="validation"><small>choose image</small>
           </div>
-          <!--  -->
           <div class="loader" *ngIf="loading">
             <div class="lds-spinner">
               <div></div>
@@ -44,24 +37,17 @@
               <div></div>
             </div>
           </div>
-          <!--  -->
           <label for="cityName">Name Of the City</label>
           <input id="cityName" type="text" placeholder="name of the city" formControlName='title'>
           <div *ngIf="form.get('title').invalid && form.get('title').touched" class="validation"><small>fill in the
               input</small></div>
-          <!--  -->
           <label for="postText">Text</label>
-          <textarea placeholder="...text" name="" id="postText" cols="30" rows="10" formControlName='text'>
-
-                </textarea>
-          <div *ngIf="form.get('text').invalid && form.get('text').touched" class="validation"><small>fill in the
-              textarea</small></div>
+          <textarea placeholder="...text" name="" id="postText" cols="30" rows="10" formControlName='text'></textarea>
+          <div *ngIf="form.get('text').invalid && form.get('text').touched" class="validation"><small>fill in
+              thetextarea</small></div>
           <button class="post" type="submit" [disabled]="form.invalid">post</button>
         </form>
       </div>
-
     </ng-template>
   </div>
-
-
 </div>

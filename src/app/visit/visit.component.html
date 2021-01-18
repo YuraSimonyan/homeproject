@@ -4,18 +4,14 @@
       <div class="visit-formControl">
         <label for="city" class="visit-cityLabel">Name of The City</label>
         <input formControlName="name" type="text" id="city" class="visit-cityInput" placeholder="...city name">
-
-        <!--  -->
         <button class="visit-cityButton" type="submit" [disabled]="form.invalid">add to the list</button>
       </div>
     </form>
   </div>
-
-  <div class="visitTable" *ngFor="let p of list; index as i">
+  <div class="visitTable" *ngFor="let p of listService.list; index as i">
     <div class="visitTable-control">
       <div class="visitTable-name">{{p.name}}</div>
-      <button class="visitTable-delete" (click)="list.splice(i, 1)">delete</button>
-
+      <button class="visitTable-delete" (click)="listService.list.splice(i, 1)">delete</button>
     </div>
   </div>
 </div>
