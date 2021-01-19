@@ -5,10 +5,10 @@ import { AppComponent } from './app.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { MainComponent } from './main/main.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { VisitComponent } from './visit/visit.component';
-import { PostComponent } from './main/post/post/post.component'
+import { PostComponent } from './main/post/post/post.component';
 
 
 @NgModule({

@@ -7,7 +7,7 @@ import { EventEmitter } from 'events';
   styleUrls: ['./navmenu.component.scss']
 })
 export class NavmenuComponent implements OnInit {
-  @Output() myEvent = new EventEmitter()
+  @Output() myEvent = new EventEmitter();
 
   constructor() { }
 

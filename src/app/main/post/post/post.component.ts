@@ -8,14 +8,14 @@ import { MainService, Post } from '../../main.service';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  post: Post
+  post: Post;
 
   constructor(private route: ActivatedRoute, private mainService: MainService) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params=>{
-    this.post=this.mainService.getByid(+params.id)
-    })
+    this.route.params.subscribe(params => {
+    this.post = this.mainService.getByid(+params.id);
+    });
   }
 
 }

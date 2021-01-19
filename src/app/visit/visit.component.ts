@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { VisitService } from './visit.service';
-export interface addName {
-  name: string,
-  id?: number
+export interface AddName {
+  name: string;
+  id?: number;
 }
 @Component({
   selector: 'app-visit',
@@ -11,17 +11,17 @@ export interface addName {
   styleUrls: ['./visit.component.scss']
 })
 export class VisitComponent implements OnInit {
-  form: FormGroup
+  form: FormGroup;
 
   constructor(public listService: VisitService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
-    })
+    });
   }
-  submit() {
+  submit(): any{
     this.listService.list.unshift(this.form.value);
-    this.form.reset()
+    this.form.reset();
   }
 }
