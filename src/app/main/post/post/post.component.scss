@@ -1,0 +1,21 @@
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+.card {
+  margin: 0 auto;
+  width: 600px;
+  min-height: 400px;
+  padding: 25px;
+  margin-top: 10px;
+
+  border-radius: 10px;
+  background-color: rgba(248, 248, 255, 0.52);
+}
+img {
+  width: 100%;
+}
+.text {
+  margin-top: 5px;
+  line-height: 20px;
+}

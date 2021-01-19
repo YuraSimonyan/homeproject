@@ -10,6 +10,7 @@
           <img [src]="getSantizeUrl(p.img)" alt="" class="main-img">
           <h2 class="main-header">{{p.title}} </h2>
           <div class="main-text"> {{p.text}}</div>
+          <div><a [routerLink]="['post', p.id]" >more</a></div>
         </div>
       </div>
     </div>
