@@ -1,28 +1,16 @@
-.navmenu {
-  height: 50px;
-  background-color: grey;
-
-  .navmenu-list {
-    margin: 0 auto;
-    width: 800px;
+mat-toolbar{
+  justify-content: space-between;
+  .navmenu-list{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    li {
-
-      margin-top: 10px;
-      list-style: none;
-      font-size: 19px;
-
-      a {
-        text-decoration: none;
-        color: ghostwhite;
-      }
- 
-      a:hover {
-        color: rgba($color: ghostwhite, $alpha: 0.5);
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+    li{      
+      a{
+        font-size: 20px;
       }
     }
   }
 }
+
+

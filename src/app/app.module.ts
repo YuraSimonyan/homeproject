@@ -6,9 +6,11 @@ import { NavmenuComponent } from './navmenu/navmenu.component';
 import { MainComponent } from './main/main.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AboutComponent } from './about/about.component';
 import { VisitComponent } from './visit/visit.component';
 import { PostComponent } from './main/post/post/post.component';
+import { AboutModule } from './about/about.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -16,7 +18,6 @@ import { PostComponent } from './main/post/post/post.component';
     AppComponent,
     NavmenuComponent,
     MainComponent,
-    AboutComponent,
     VisitComponent,
     PostComponent
   ],
@@ -25,7 +26,10 @@ import { PostComponent } from './main/post/post/post.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule,
+    BrowserAnimationsModule,
+    MaterialModule
 
   ],
   providers: [],
